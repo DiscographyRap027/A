@@ -1,0 +1,274 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: #121212; /* Fond noir */
+}
+
+/* Header et menu de navigation */
+header {
+    background-color: #000; /* Fond noir dans la barre de navigation */
+    padding: 10px;
+    box-shadow: 0 4px 2px -2px gray; /* Légère ombre pour un effet visuel */
+}
+
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #111;
+}
+
+/* Menu déroulant */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Sous-menu */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #222;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+nav li:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    display: block;
+}
+
+.submenu a {
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.submenu a:hover {
+    background-color: #444;
+}
+
+/* Section Albums */
+.albums {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.albums h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.album-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.album {
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.album img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease;
+}
+
+.album img:hover {
+    transform: scale(1.05);
+}
+
+.album h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.album p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.album a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Tracklist */
+.tracklist {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #333;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.tracklist ol {
+    padding-left: 20px;
+}
+
+.tracklist li {
+    margin: 5px 0;
+}
+
+.tracklist a {
+    color: white;
+    text-decoration: none;
+}
+
+.tracklist a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+}
+
+/* Liens avec logos sociaux */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-link {
+    display: inline-block;
+}
+
+.social-icon {
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+    transform: scale(1.1);
+}
+
+/* Bouton */
+.button {
+    display: inline-block;
+    background-color: white;
+    color: #121212;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ffcc00;
+    color: #121212;
+}
+
+/* Pied de page */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #000;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* Avertissement */
+.warning {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    margin: 20px 0;
+}
+
+/* Style CSS supplémentaires */
+.album img:hover {
+    transform: scale(1.05); /* Effet de zoom pour les images des albums */
+}
+
+/* Pour les liens externes */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+}
